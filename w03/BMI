@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+
+	double kg,m,BMI;
+	
+	printf("Enter weight: ");
+	scanf("%f",&kg);
+	printf("Enter height: ");
+	scanf("%f",&m);
+	while(kg>=0,m>=0){
+		BMI=kg/(m*m);
+		if(BMI<18.5){
+				printf("too thin  \n");	
+		}else if(18.5<=BMI<24){
+				printf("normal  \n");
+		}else if(24<=BMI<27){
+				printf("heavy  \n");
+		}else if(27<=BMI<30){
+				printf("mild heavy  \n");
+		}else if(30<=BMI<35){
+				printf("medium heavy  \n");
+		}else if(BMI>=35){
+				printf("serious heavy  \n");	
+		}
+	    printf("Enter weight: ");
+	    scanf("%d",&kg);
+	    printf("Enter height: ");
+	    scanf("%d",&m);
+	}
+}
