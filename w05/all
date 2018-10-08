@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+
+int isleap(int year){
+if((year%4==0 &&!(year%100==0)||year%400==0)){
+		return 1;
+	}
+	else{
+		return 0;
+	}
+}
+
+int seconds(int hh,int mm,int ss){
+    int sec;
+    sec = hh*3600+mm*60+ss;
+    return sec;
+}
+
+
+
+int main(){
+   int choice;
+   int year;
+   int sec;
+   int hh,mm,ss;
+
+
+
+
+
+      while(1){
+    printf("Main Menu\n");
+    printf("1. leap year\n");
+    printf("2. time convert\n");
+    printf("3. Exit\n");
+    printf("=> ");
+    scanf("%d", &choice);
+    if(choice==3) break;
+    switch(choice){
+        case 1:
+       printf("Enter year: ");
+       scanf("%d",&year);
+       if(isleap(year)){
+		printf("is a leap year \n");
+	}
+	else{
+		printf("is not a leap year \n");
+	}break;
+        case 2:
+    printf("Enter hh:mm:ss:");
+	scanf("%d:%d:%d",&hh, &mm, &ss);
+
+
+	printf("%d sec \n",seconds(hh, mm, ss));
+
+
+}
+    }
+   }
