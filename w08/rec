@@ -1,0 +1,26 @@
+#include<stdio.h>
+int drawRect(int h,int w){
+    int total=0;
+    for(int i=0;i<=w;i++){
+        for(int j=0;j<=h;j++){
+           total += i 
+        }
+    } return total;
+}
+int rdrawRect(int h,int w){
+    if(h>=1 && w>=1){
+        return 1;
+    }else
+     return ;
+}
+
+
+int main(){
+ int height, width;
+ printf("Enter height and width: ");
+ scanf("%d", &height, &width);
+ printf("Draw using iteration\n");
+ drawRect(height,width);
+ printf("Draw using recursion\n"); 
+ rdrawRect;
+}
