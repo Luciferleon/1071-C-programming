@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<ctype.h>
+
+int checkSqurt(int N){
+ for(int i=0;i=10;i++){
+    if(N/i==i){
+        return 1;
+    }
+    else
+        return 0;
+ }
+ }
+
+
+int main(){
+    int N;
+    int i;
+char cont = 'Y';
+
+    while(cont=='Y'){
+
+
+printf("Enter N: ");
+scanf("%d",&N);
+if(N==25){
+    printf("Yes. %d = 5 * 5\n",N);
+}
+if(N==30){
+    printf("No.\n");
+}
+printf("Continue (Y/N)? ");
+if('Y'){
+getchar();
+cont = toupper(getchar());
+
+}
+}
+if('N')
+printf("Coding by 407410868");
+    }
+
