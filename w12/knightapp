@@ -22,7 +22,9 @@ Pos findNextBestMove(int m[][8],int access[][8],int row,int col){
  int min = 9;
  int minRow = -1,minCol = -1;
  access[row][col] = 0;
+ 
  for(int i=0;i<8;i++){
+
   nextRow = row + v[i];
   nextCol = col + h[i];
 
@@ -32,6 +34,7 @@ Pos findNextBestMove(int m[][8],int access[][8],int row,int col){
 min = access [nextRow][nextCol];
 minRow = nextRow;
 minCol = nextCol;
+
      }
 
   }
@@ -55,7 +58,9 @@ while(1){
     if(choice==3)break;
     switch(choice){
     case 1 :
-        int m[8][8] = {0};
+        int a, b;
+
+int m[8][8] = {0};
 
   int access[ 8 ][ 8 ] =
        { 2, 3, 4, 4, 4, 4, 3, 2,
@@ -72,9 +77,13 @@ while(1){
  srand(time(NULL));
  int row = rand()%8;
  int col = rand()%8;
+ printf("Enter row and col for number 1: ");
+        scanf("%d %d", &row, &col);
+       printf("The board for this test is:\n");
  m[row][col] = 1;
  printf("(row,col) = (%d,%d)\n\n", row, col);
  for(int i=2;i<=64;i++){
+
   pos = findNextBestMove(m,access,row,col);
 
 
@@ -93,6 +102,18 @@ while(1){
  prArr(m);
  printf("\nThe tour ended with %d moves\n",moves);
  printf("This was a full tour!\n");
+
+break;
+
+
+
+
+
+
+
+
+
+
 
     }
   }
